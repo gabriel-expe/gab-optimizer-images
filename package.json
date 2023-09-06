@@ -1,0 +1,20 @@
+{
+	"name": "gab-optimizer-images",
+	"version": "1.0.0",
+	"description": "",
+	"main": "./src/index.js",
+	"keywords": [],
+	"author": "",
+	"bin": {
+		"gio": "./bin/index.js"
+	},
+	"license": "ISC",
+	"type": "module",
+	"dependencies": {
+		"compress-images": "2.0.5"
+	},
+	"devDependencies": {
+		"eslint-config-prettier": "^9.0.0",
+		"standard": "^17.1.0"
+	}
+}
