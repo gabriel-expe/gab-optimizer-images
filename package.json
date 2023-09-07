@@ -11,7 +11,8 @@
 	"license": "MIT",
 	"type": "module",
 	"dependencies": {
-		"compress-images": "2.0.5"
+		"compress-images": "2.0.5",
+		"yargs": "^17.7.2"
 	},
 	"devDependencies": {
 		"eslint-config-prettier": "^9.0.0",
