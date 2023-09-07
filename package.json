@@ -1,14 +1,14 @@
 {
 	"name": "gab-optimizer-images",
 	"version": "1.0.0",
-	"description": "",
+	"description": "A versatile command-line utility for image optimization and conversion.",
 	"main": "./src/index.js",
 	"keywords": [],
-	"author": "",
+	"author": "Gabriel Rubio",
 	"bin": {
 		"gio": "./bin/index.js"
 	},
-	"license": "ISC",
+	"license": "MIT",
 	"type": "module",
 	"dependencies": {
 		"compress-images": "2.0.5"
