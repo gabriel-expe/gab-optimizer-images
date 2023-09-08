@@ -25,6 +25,7 @@ export const { argv } = yargs(hideBin(process.argv)).command({
 			alias: 'd',
 			describe: 'Destination path to create the new images folder',
 			type: 'string',
+			default: '.',
 		},
 	},
 });
