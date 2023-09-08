@@ -21,7 +21,7 @@ npm install -g gab-images-optimizer
 After installation, you can use the CLI with the following command:
 
 ```bash
-gio compress [options]
+gio compress route [options]
 ```
 
 ### Options
@@ -33,19 +33,25 @@ gio compress [options]
 
 ## Examples
 
-1. Optimize images in a specific folder (`../test/folder_name/`) with default settings:
+1. Optimize images from actual route with default options, just add a point in the end:
+
+```bash
+gio compress .
+```
+
+2. Optimize images in a specific folder (`../test/folder_name/`) with default settings:
 
 ```bash
 gio compress ../test/folder_name/
 ```
 
-2. Optimize just one image, quality 70 and new format webp and saving where the command is being executed:
+3. Optimize just one image, quality 70 and new format webp and saving where the command is being executed:
 
 ```bash
 gio compress ../test/image_name.png/ -q 70 -f webp
 ```
 
-3. Optimize images in the actual folder, sending all of them (folders and images) to a specific route with a rezise of 400px taking width as base:
+4. Optimize images in the actual folder, sending all of them (folders and images) to a specific route with a rezise of 400px taking width as base:
 
 ```bash
 gio compress ../test/folder_name/ --quality 60 --format jpg --resize 400 --destination ../../documents/new_folder/

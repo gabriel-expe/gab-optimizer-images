@@ -1,13 +1,13 @@
 #!/usr/bin/env node
 
-import { lstat, mkdir } from 'node:fs';
-import { join } from 'node:path';
+import { lstat } from 'node:fs';
 import { processFile } from '../lib/process-file.js';
 import { processDirectory } from '../lib/process-directory.js';
 import { argv } from '../config/config.js';
 
 const path = argv._[1];
 lstat(path, (err, stats) => {
+	console.log(path);
 	if (err) {
 		console.log('Error reading stats from ', path);
 		process.exit(1);
