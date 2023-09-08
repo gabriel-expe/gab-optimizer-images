@@ -1,7 +1,10 @@
-import { yargs } from 'yargs';
+import yargs from 'yargs/yargs';
+import { hideBin } from 'yargs/helpers';
 
-export const argv = yargs
-	.options({
+export const { argv } = yargs(hideBin(process.argv)).command({
+	command: 'compress',
+	describe: 'optimize images in the folder',
+	builder: {
 		resize: {
 			alias: 'r',
 			describe: 'Resize with maximum width in pixels',
@@ -23,5 +26,5 @@ export const argv = yargs
 			describe: 'Destination path to create the new images folder',
 			type: 'string',
 		},
-	})
-	.help().argv;
+	},
+});
