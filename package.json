@@ -17,5 +17,13 @@
 	"devDependencies": {
 		"eslint-config-prettier": "^9.0.0",
 		"standard": "^17.1.0"
-	}
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/Gabriel1085/gab-optimizer-images.git"
+	},
+	"bugs": {
+		"url": "https://github.com/Gabriel1085/gab-optimizer-images/issues"
+	},
+	"homepage": "https://github.com/Gabriel1085/gab-optimizer-images/blob/main/README.md"
 }
