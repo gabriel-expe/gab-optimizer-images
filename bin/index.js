@@ -1,20 +1,32 @@
 #!/usr/bin/env node
 
-import { lstat } from 'node:fs';
+import { lstat, mkdir } from 'node:fs';
+import { join } from 'node:path';
 import { processFile } from '../lib/process-file.js';
 import { processDirectory } from '../lib/process-directory.js';
+import { argv } from '../config/config.js';
 
-const targetPath = process.argv[2] ?? '.';
-
-lstat(targetPath, (err, stats) => {
+const path = argv._[1];
+lstat(path, (err, stats) => {
 	if (err) {
-		console.error('Error reading target path', err.message);
+		console.log('Error reading stats from ', path);
 		process.exit(1);
 	}
 
-	if (stats.isFile()) {
-		processFile(targetPath);
-	} else if (stats.isDirectory()) {
-		processDirectory(targetPath);
-	}
+	const destinationPath = argv.destination
+		? join(argv.destination, 'gab-optimized-images')
+		: join('.', 'gab-optimized-images');
+
+	mkdir(destinationPath, { recursive: true }, (err) => {
+		if (err) {
+			console.log('Error creating a new directory ', err);
+			process.exit(1);
+		}
+
+		if (!stats.isDirectory()) {
+			processFile(path);
+		} else {
+			processDirectory(path);
+		}
+	});
 });
