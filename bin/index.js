@@ -13,20 +13,9 @@ lstat(path, (err, stats) => {
 		process.exit(1);
 	}
 
-	const destinationPath = argv.destination
-		? join(argv.destination, 'gab-optimized-images')
-		: join('.', 'gab-optimized-images');
-
-	mkdir(destinationPath, { recursive: true }, (err) => {
-		if (err) {
-			console.log('Error creating a new directory ', err);
-			process.exit(1);
-		}
-
-		if (!stats.isDirectory()) {
-			processFile(path);
-		} else {
-			processDirectory(path);
-		}
-	});
+	if (!stats.isDirectory()) {
+		processFile(path);
+	} else {
+		processDirectory(path);
+	}
 });
