@@ -1,6 +1,3 @@
 {
-	"extends": ["standard", "prettier"],
-	"rules": {
-		"no-unused-vars": "warn"
-	}
+	"extends": ["standard", "prettier"]
 }
