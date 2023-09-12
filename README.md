@@ -1,6 +1,6 @@
 # gab-images-optimizer
 
-**Version:** 1.0.0
+**Version:** 1.0.2
 
 **Author:** Gabriel Rubio
 
