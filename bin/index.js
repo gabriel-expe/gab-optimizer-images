@@ -6,6 +6,7 @@ import { processDirectory } from '../lib/process-directory.js';
 import { argv } from '../config/config.js';
 
 const path = argv._[1];
+console.log(path);
 lstat(path, (err, stats) => {
 	console.log(path);
 	if (err) {

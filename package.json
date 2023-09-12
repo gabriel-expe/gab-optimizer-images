@@ -1,6 +1,6 @@
 {
 	"name": "gab-images-optimizer",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A versatile command-line utility for image optimization and conversion.",
 	"main": "./src/index.js",
 	"keywords": [],
